@@ -13,6 +13,7 @@
 //#include <io.h>
 //#include<winsock2.h>
 //#include<Ws2tcpip.h>
+//#pragma comment(lib, "ws2_32.lib")
 //#endif
 //
 //#define PORT 80
@@ -20,12 +21,14 @@
 //int main(int argc, char* argv[])
 //{
 //
-//	int sock;
+//	unsigned int sock; //TODO
 //	char buffer[1024];
 //	const char* hello = "hello";
 //	struct sockaddr_in servaddr, cliaddr;
 //
-//	if ((sock = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
+//
+////	if ((sock = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {        LINUX
+//	sock = socket(AF_INET, SOCK_DGRAM, 0);
 //		perror("socket creation failed");
 //		exit(EXIT_FAILURE);
 //	}
